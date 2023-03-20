@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMICalculator.Views.BMICalculatorPage"
+             xmlns:local="clr-namespace:BMICalculator.ViewModels"
+             Title="BMICalculatorPage">
+
+    <FlexLayout Padding="40" Direction="Column" JustifyContent="SpaceEvenly">
+        <StackLayout>
+            <Label Text="BMI" FontSize="60" HorizontalOptions="Center" FontAttributes="Bold" TextColor="DarkBlue"></Label>
+            
+            <Label Text="Height (cm):" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" />
+            <Entry Text="{Binding Height}" FontSize="Large" TextColor="Red" FontAttributes="Bold" />
+            <Stepper Value="{Binding Height}" Minimum="20" Maximum="240" HorizontalOptions="Center"></Stepper>
+
+            <Label Text="Weight (kg):" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" />
+            <Entry Text="{Binding Weight}" FontSize="Large" TextColor="Red" FontAttributes="Bold" />
+            <Stepper Value="{Binding Weight}" Minimum="30" Maximum="320" HorizontalOptions="Center"></Stepper>
+
+            <Label Text="BMI Score" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Label Text="{Binding BMIScore}" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Green" />
+            <Label Text="BMI Result" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Label Text="{Binding BMIResult}" FontSize="40" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Green" />
+        </StackLayout>
+    </FlexLayout>
+    
+</ContentPage>
