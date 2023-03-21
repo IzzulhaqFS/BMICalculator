@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BMICalculator.ViewModels
 {
+
     internal class BMIListPageViewModel
     {
     }

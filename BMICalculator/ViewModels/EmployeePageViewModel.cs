@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using BMICalculator.Views;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,18 @@ namespace BMICalculator.ViewModels
         public string _employeeName;
 
         [RelayCommand]
-        public void Save()
+        async Task Save()
         {
+            if (string.IsNullOrEmpty(EmployeeName))
+                return;
 
+            await Shell.Current.GoToAsync($"{nameof(BMICalculatorPage)}?name={EmployeeName}");
+        }
+
+        [RelayCommand]
+        async Task ToBMIList()
+        {
+            await Shell.Current.GoToAsync(nameof(BMIListPage));
         }
     }
 }

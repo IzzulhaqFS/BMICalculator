@@ -12,5 +12,7 @@
         <Label Text="{Binding EmployeeName}" VerticalOptions="Center" FontSize="Large"></Label>
 
         <Button Text="Save" Command="{Binding SaveCommand}"></Button>
+
+        <Button Text="BMI List"></Button>
     </VerticalStackLayout>
 </ContentPage>

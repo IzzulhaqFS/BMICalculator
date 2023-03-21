@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace BMICalculator.ViewModels
 {
+    [QueryProperty(nameof(Name), "name")]
     public partial class BMICalculatorPageViewModel : ObservableObject
     {
+        [ObservableProperty]
+        public string _name;
+
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(BMIScore))]
         [NotifyPropertyChangedFor(nameof(BMIResult))]
